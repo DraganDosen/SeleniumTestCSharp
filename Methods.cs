@@ -41,7 +41,7 @@ namespace SeleniumTest
             driver.FindElement(By.Id(Paths.dropdown)).Click();
             Thread.Sleep(2500);
             driver.FindElement(By.Id(Paths.dropdown)).Click();
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
             driver.FindElement(By.XPath(Paths.dropdown_xpath)).Click();
             Thread.Sleep(3000);
 
