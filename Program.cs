@@ -48,6 +48,17 @@ namespace TestNamespace
             
             method.returnDriver();
         }
+        [Test]
+
+        public void verifyLogo()
+
+        {
+
+            driver.Navigate().GoToUrl("https://www.browserstack.com/");
+
+            Assert.IsTrue(driver.FindElement(By.XPath("//*[@id=\"header-habitat\"]/div[1]/div/div/div/a")).Displayed);
+
+        }
         [Test, Order(1)]
         public void CSSPractice()
         {
