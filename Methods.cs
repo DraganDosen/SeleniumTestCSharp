@@ -248,7 +248,7 @@ namespace SeleniumTest
         driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
 
         try {
-           // test 
+           
            Console.WriteLine("Logo will check now");
            bool logoIsDisplayed = driver.FindElement(By.XPath(Paths.logoPath)).Displayed;
            if (!logoIsDisplayed) {
