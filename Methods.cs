@@ -39,7 +39,6 @@ namespace SeleniumTest
             //select-demo
             string dayOfTheWeek = "Wednesday";
             driver.FindElement(By.Id(Paths.dropdown)).Click();
-
             Thread.Sleep(2100);
             driver.FindElement(By.Id(Paths.dropdown)).Click();
             Thread.Sleep(2000);
