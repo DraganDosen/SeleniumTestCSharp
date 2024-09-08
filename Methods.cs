@@ -34,7 +34,7 @@ namespace SeleniumTest
         }
 
         public void Dropdown() {
-            int a = 555;
+            
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             wait.IgnoreExceptionTypes(typeof(NoSuchElementException));
             driver.Navigate().GoToUrl(Paths.dropdownlink);
