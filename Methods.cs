@@ -40,6 +40,7 @@ namespace SeleniumTest
             string month = "6";
             int test = 7;
             int t = 7;
+            int ta = 17;
 
 
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
