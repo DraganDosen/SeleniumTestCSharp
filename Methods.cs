@@ -37,14 +37,6 @@ namespace SeleniumTest
             string first_name= "Dragan";
             string second_name = "Dosen";
             int year = 75;
-            string month = "6";
-            int test = 71;
-            int t = 17;
-
-            int ta = 17;
-            int tam = 17;
-
-
 
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             wait.IgnoreExceptionTypes(typeof(NoSuchElementException));
