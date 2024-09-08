@@ -36,6 +36,7 @@ namespace SeleniumTest
         public void Dropdown() {
             string first_name= "Dragan";
             string second_name = "Dosen";
+            int year = 75;
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             wait.IgnoreExceptionTypes(typeof(NoSuchElementException));
             driver.Navigate().GoToUrl(Paths.dropdownlink);
