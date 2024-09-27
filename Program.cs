@@ -36,7 +36,8 @@ namespace TestNamespace
         [SetUp]// from console run with: dotnet test
         public void startBrowser()
         {
-             driver = new EdgeDriver(Paths.pathToDriver);
+             //driver = new EdgeDriver(Paths.pathToDriver);
+            driver = new EdgeDriver();
         }
         [Test, Order(0)]
         public void Dropdown() {
