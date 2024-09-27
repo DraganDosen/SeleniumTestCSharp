@@ -134,7 +134,7 @@ namespace SeleniumTest
             try
             {
                 Console.WriteLine("check now Platform text");
-                Assert.AreEqual(Paths.checkPlatformText, textInPlathormPage);
+                Assert.Equals(Paths.checkPlatformText, textInPlathormPage);
             }
             catch (WebException ex) { }
             //Switch to the window you want active in your test
@@ -153,7 +153,7 @@ namespace SeleniumTest
             try
             {
                 Console.WriteLine("check now Enterprize text");
-                Assert.AreEqual(Paths.checkEnterprizeText, textInEnterprizePage);
+                Assert.Equals(Paths.checkEnterprizeText, textInEnterprizePage);
             }
             catch (WebException ex) { }
             Back();
@@ -215,7 +215,7 @@ namespace SeleniumTest
                 if (!trackIsDisplayed)
                 {
                     Console.WriteLine("Track is not displayed");
-                    Assert.AreEqual("True", trackIsDisplayed);
+                    Assert.Equals("True", trackIsDisplayed);
                 }
                 else
                 {
@@ -239,7 +239,7 @@ namespace SeleniumTest
                 if (!shipmentIsDisplayed)
                 {
                     Console.WriteLine("Shiping is not displayed");
-                    Assert.AreEqual("True", shipmentIsDisplayed);
+                    Assert.Equals("True", shipmentIsDisplayed);
                 }
                 else
                 {
@@ -259,7 +259,7 @@ namespace SeleniumTest
            bool logoIsDisplayed = driver.FindElement(By.XPath(Paths.logoPath)).Displayed;
            if (!logoIsDisplayed) {
            Console.WriteLine("Logo is not displayed");
-           Assert.AreEqual("True", logoIsDisplayed);
+           Assert.Equals("True", logoIsDisplayed);
                                  }
             else {
             Console.WriteLine("Logo is displayed");

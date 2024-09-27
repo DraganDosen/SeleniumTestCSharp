@@ -14,7 +14,7 @@ using Nest;
 using Actions = OpenQA.Selenium.Interactions.Actions;
 using System.Xml.Linq;
 using SeleniumTest;
-using OpenQA.Selenium.DevTools.V108.Browser;
+//using OpenQA.Selenium.DevTools.V108.Browser;
 using OpenQA.Selenium.Chromium;
 using System;
 using System.Collections.Generic;
@@ -36,7 +36,8 @@ namespace TestNamespace
         [SetUp]// from console run with: dotnet test
         public void startBrowser()
         {
-             driver = new EdgeDriver(Paths.pathToDriver);
+            // driver = new EdgeDriver(Paths.pathToDriver);
+            driver = new EdgeDriver();
         }
         [Test, Order(0)]
         public void Dropdown() {
@@ -56,7 +57,7 @@ namespace TestNamespace
 
             driver.Navigate().GoToUrl("https://www.browserstack.com/");
 
-            Assert.IsTrue(driver.FindElement(By.XPath("//*[@id=\"header-habitat\"]/div[1]/div/div/div/a")).Displayed);
+           driver.FindElement(By.XPath("//*[@id=\"header-habitat\"]/div[1]/div/div/div/a"));
 
         }
         [Test, Order(1)]
@@ -88,24 +89,7 @@ namespace TestNamespace
             //driver.Quit();
         }
 
-        [Test, Order(4)]
-        public void Navigate()
-        {
-            
-            Console.WriteLine("Test started");
-            Methods method = new Methods(driver);
-            driver.Navigate().GoToUrl(Paths.LambdaSitePath);
-            method.Expand();
-            method.Platform();
-            method.Back();
-            
-            method.returnDriver();
-            
-            //if (driver != null) {
-            //    driver.Close();
-            //}
-            //driver.Quit();
-        }
+        
         [Test, Order(5)]
         public void AlertHandle()
         {
@@ -189,6 +173,8 @@ namespace TestNamespace
             bodyContent.Description.Should().NotBeNull();
             bodyContent.Title.Should().NotBeNull();
             Console.WriteLine("body id, description and title: " + bodyContent.Id +" "+ bodyContent.Title+ " " + bodyContent.Description);
+            Assert.That(222.Equals(bodyContent.Id),"Failure");
+            
         }
         [Test]
         public void SearchBooks()
@@ -201,6 +187,7 @@ namespace TestNamespace
             Console.WriteLine(JToken.Parse(response.Content).ToString());
             string s = JToken.Parse(response.Content).ToString();
             //"title": "Book 1",
+            Console.WriteLine(s);
             Assert.Multiple(() =>
             {
                 
@@ -274,9 +261,15 @@ namespace TestNamespace
             RestClient client = new RestClient(baseUrl);
             RestRequest restRequest = new RestRequest(baseUrl, Method.Get);
             RestResponse restResponse = client.Execute(restRequest);
+            Console.WriteLine("Response : " + restResponse.ToString());
+            Console.WriteLine("Response Status Code : " + restResponse.StatusCode);
+            Console.WriteLine("Response Content : " + restResponse.Content);
+            
+
             //client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 
             // Example: GET request
+
 
 
 

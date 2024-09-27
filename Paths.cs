@@ -8,7 +8,7 @@ namespace SeleniumTest
 {
     public static class Paths
     {
-        public static string pathToDriver = "C:\\Users\\draga\\Downloads\\edgedriver_win64 (2)\\msedgedriver.exe";
+        public static string pathToDriver = "C:\\Users\\draga\\Downloads\\edgedriver_win64 (3)\\msedgedriver.exe";
         public static string footer = "//*[@id=\"ups-footer\"]/div[2]/div/p";
         public static string span= "//*[@id=\"__tealiumImplicitmodal\"]/div/button/span[1]";
         public static string trackLink = "//*[@id=\"ups-footer_thisSiteLinks\"]/li[1]/a";
